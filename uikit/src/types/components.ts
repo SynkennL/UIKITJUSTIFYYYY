@@ -2,7 +2,6 @@
 
 // Button
 export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'link'
-export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 // Input
 export type InputVariant = 'default' | 'filled' | 'underline' | 'ghost'
