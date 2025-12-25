@@ -16,7 +16,6 @@ import { JButton } from '@/components'
         <JButton variant="solid">Solid</JButton>
         <JButton variant="outline">Outline</JButton>
         <JButton variant="ghost">Ghost</JButton>
-        <JButton variant="soft">Soft</JButton>
         <JButton variant="link">Link</JButton>
       </div>
     </div>
@@ -33,12 +32,12 @@ import { JButton } from '@/components'
       </div>
     </div>
 
-    <!-- Özellikler -->
+    <!-- Rounded -->
     <div class="p-6 bg-slate-50 rounded-xl space-y-4">
-      <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Özellikler</p>
+      <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Rounded</p>
       <div class="flex flex-wrap items-center gap-3">
         <JButton rounded>Rounded</JButton>
-        <JButton disabled>Disabled</JButton>
+        <JButton variant="outline" rounded>Outline Rounded</JButton>
       </div>
     </div>
 
@@ -48,7 +47,6 @@ import { JButton } from '@/components'
       <div class="flex flex-wrap gap-3">
         <JButton size="lg" rounded>Large Rounded</JButton>
         <JButton variant="outline" size="sm">Outline Small</JButton>
-        <JButton variant="soft" size="xl">Soft XL</JButton>
         <JButton variant="ghost" size="xs">Ghost XS</JButton>
         <JButton variant="outline" rounded>Outline Rounded</JButton>
       </div>

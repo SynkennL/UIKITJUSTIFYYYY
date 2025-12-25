@@ -1,7 +1,7 @@
 // Component Types for UI Kit
 
 // Button
-export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'soft' | 'link'
+export type ButtonVariant = 'solid' | 'outline' | 'ghost' | 'link'
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 // Input

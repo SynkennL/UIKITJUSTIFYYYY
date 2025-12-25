@@ -1,15 +1,14 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { ButtonVariant, ButtonSize } from '@/types/components'
 
 const props = withDefaults(defineProps<{
   variant?: ButtonVariant
   size?: ButtonSize
-  disabled?: boolean
   rounded?: boolean
 }>(), {
   variant: 'solid',
   size: 'md',
-  disabled: false,
   rounded: false
 })
 
@@ -25,22 +24,19 @@ const variants: Record<ButtonVariant, string> = {
   solid: 'bg-slate-800 text-white hover:bg-slate-700',
   outline: 'border border-slate-300 text-slate-700 hover:bg-slate-50',
   ghost: 'text-slate-600 hover:bg-slate-100',
-  soft: 'bg-slate-100 text-slate-700 hover:bg-slate-200',
   link: 'text-slate-600 hover:underline !p-0'
 }
+
+const buttonClass = computed(() => [
+  'inline-flex items-center justify-center font-medium transition-all cursor-pointer',
+  sizes[props.size],
+  variants[props.variant],
+  props.rounded ? 'rounded-full' : 'rounded-lg'
+])
 </script>
 
 <template>
-  <button
-    :class="[
-      'inline-flex items-center justify-center font-medium transition-all cursor-pointer',
-      sizes[size],
-      variants[variant],
-      rounded ? 'rounded-full' : 'rounded-lg',
-      disabled && 'opacity-50 cursor-not-allowed'
-    ]"
-    :disabled="disabled"
-  >
+  <button :class="buttonClass">
     <slot />
   </button>
 </template>
