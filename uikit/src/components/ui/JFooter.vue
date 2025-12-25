@@ -1,42 +1,22 @@
 <script setup lang="ts">
-const currentYear = new Date().getFullYear()
+type FooterVariant = 'default' | 'minimal' | 'bordered' | 'dark'
 
-interface Props {
-  text?: string
-  variant?: 'default' | 'minimal' | 'centered'
-}
-
-withDefaults(defineProps<Props>(), {
-  text: 'UI Kit',
+const props = withDefaults(defineProps<{
+  variant?: FooterVariant
+}>(), {
   variant: 'default'
 })
+
+const variants: Record<FooterVariant, string> = {
+  default: 'bg-white border-t border-slate-200',
+  minimal: 'bg-transparent border-t border-slate-100',
+  bordered: 'bg-white border-t-2 border-slate-900',
+  dark: 'bg-slate-900 text-white'
+}
 </script>
 
 <template>
-  <footer 
-    :class="[
-      'mt-auto',
-      variant === 'default' ? 'border-t border-slate-200 bg-white' : '',
-      variant === 'minimal' ? 'border-t border-slate-100' : '',
-      variant === 'centered' ? 'border-t border-slate-200 bg-slate-50' : ''
-    ]"
-  >
-    <div class="max-w-6xl mx-auto px-6 py-6">
-      <div 
-        :class="[
-          'text-sm text-slate-500',
-          variant === 'centered' ? 'text-center' : 'flex items-center justify-between'
-        ]"
-      >
-        <template v-if="variant === 'centered'">
-          <p>{{ text }}</p>
-          <p class="mt-1">&copy; {{ currentYear }} Tüm hakları saklıdır.</p>
-        </template>
-        <template v-else>
-          <span>{{ text }}</span>
-          <span>&copy; {{ currentYear }}</span>
-        </template>
-      </div>
-    </div>
+  <footer :class="['mt-auto transition-all', variants[variant]]">
+    <slot />
   </footer>
 </template>
