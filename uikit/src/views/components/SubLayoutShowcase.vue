@@ -21,7 +21,7 @@ const simpleNavbarConfig = ref<NavbarConfig>({
 
 const dropdownNavbarConfig = ref<NavbarConfig>({
     brand: {
-        text: 'Dropdown Demo'
+        text: 'Dropdown Menu',
     },
     items: [
         { label: 'Ana Sayfa', href: '/' },
@@ -101,7 +101,6 @@ const columnsFooterConfig = ref<FooterConfig>({
             <span class="text-xs text-slate-400">SubNavbar & SubFooter</span>
         </div>
 
-        <!-- SubNavbar Examples -->
         <div class="space-y-6">
             <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">SubNavbar</p>
 
@@ -138,7 +137,6 @@ const columnsFooterConfig = ref<FooterConfig>({
             </div>
         </div>
 
-        <!-- SubFooter Examples -->
         <div class="space-y-6">
             <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">SubFooter</p>
 
