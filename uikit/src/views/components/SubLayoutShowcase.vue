@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { JSubNavbar, JSubFooter } from '@/components'
+import { JSubNavbar, JFooter } from '@/components'
 import type { NavbarConfig, FooterConfig } from '@/types/layout'
 
 // SubNavbar Configs
@@ -44,7 +44,7 @@ const dropdownNavbarConfig = ref<NavbarConfig>({
     ]
 })
 
-// SubFooter Configs
+// Footer Configs
 const simpleFooterConfig = ref<FooterConfig>({
     brand: {
         text: 'UI Kit'
@@ -98,7 +98,7 @@ const columnsFooterConfig = ref<FooterConfig>({
     <section class="space-y-8">
         <div class="flex items-center gap-3">
             <h2 class="text-xl font-semibold text-slate-900">Sub Layout</h2>
-            <span class="text-xs text-slate-400">SubNavbar & SubFooter</span>
+            <span class="text-xs text-slate-400">SubNavbar & Footer</span>
         </div>
 
         <div class="space-y-6">
@@ -138,13 +138,13 @@ const columnsFooterConfig = ref<FooterConfig>({
         </div>
 
         <div class="space-y-6">
-            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">SubFooter</p>
+            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Footer</p>
 
             <!-- Simple Layout -->
             <div class="space-y-2">
                 <span class="text-sm text-slate-600">Simple</span>
                 <div class="rounded-xl border border-slate-200">
-                    <JSubFooter :config="simpleFooterConfig" layout="simple" variant="default" />
+                    <JFooter :config="simpleFooterConfig" layout="simple" variant="default" />
                 </div>
             </div>
 
@@ -152,7 +152,7 @@ const columnsFooterConfig = ref<FooterConfig>({
             <div class="space-y-2">
                 <span class="text-sm text-slate-600">Columns</span>
                 <div class="rounded-xl border border-slate-200">
-                    <JSubFooter :config="columnsFooterConfig" layout="columns" variant="default" />
+                    <JFooter :config="columnsFooterConfig" layout="columns" variant="default" />
                 </div>
             </div>
 
@@ -160,7 +160,7 @@ const columnsFooterConfig = ref<FooterConfig>({
             <div class="space-y-2">
                 <span class="text-sm text-slate-600">Centered</span>
                 <div class="rounded-xl border border-slate-200">
-                    <JSubFooter :config="simpleFooterConfig" layout="centered" variant="default" />
+                    <JFooter :config="simpleFooterConfig" layout="centered" variant="default" />
                 </div>
             </div>
 
@@ -168,7 +168,7 @@ const columnsFooterConfig = ref<FooterConfig>({
             <div class="space-y-2">
                 <span class="text-sm text-slate-600">Dark</span>
                 <div class="rounded-xl">
-                    <JSubFooter :config="simpleFooterConfig" layout="simple" variant="dark" />
+                    <JFooter :config="simpleFooterConfig" layout="simple" variant="dark" />
                 </div>
             </div>
         </div>
