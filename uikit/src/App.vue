@@ -4,7 +4,7 @@ import PlaygroundView from '@/views/PlaygroundView.vue'
 </script>
 
 <template>
-  <MainLayout title="Justify UI">
+  <MainLayout title="Justify UI" subtitle="UI Kütüphanesi">
     <PlaygroundView />
   </MainLayout>
 </template>
