@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { JNavbar, JFooter, JButton } from '@/components'
+
+// Örnek nav items
+const navItems = [
+  { label: 'Ana Sayfa', href: '#', active: true },
+  { label: 'Hakkında', href: '#' },
+  { label: 'İletişim', href: '#' }
+]
 </script>
 
 <template>
@@ -13,33 +20,38 @@ import { JNavbar, JFooter, JButton } from '@/components'
     <div class="space-y-4">
       <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Navbar</p>
 
+      <!-- Default Navbar with Mobile Menu -->
+      <div class="rounded-xl overflow-hidden border border-slate-200">
+        <JNavbar variant="default" :sticky="false" title="Default" :nav-items="navItems">
+          <template #actions>
+            <JButton variant="solid" class="px-3 py-1.5 text-sm rounded-lg">Giriş</JButton>
+          </template>
+          <template #mobile-actions>
+            <JButton variant="solid" class="w-full justify-center">Giriş Yap</JButton>
+          </template>
+        </JNavbar>
+      </div>
+
+      <!-- Glass Navbar -->
+      <div class="rounded-xl overflow-hidden border border-slate-200 bg-gradient-to-r from-slate-100 to-slate-50">
+        <JNavbar variant="glass" :sticky="false" title="Glass" :nav-items="[{ label: 'Link', href: '#' }]" />
+      </div>
+
+      <!-- Bordered Navbar -->
+      <div class="rounded-xl overflow-hidden border border-slate-200">
+        <JNavbar variant="bordered" :sticky="false" title="Bordered" :nav-items="[{ label: 'Link', href: '#' }]" />
+      </div>
+
+      <!-- Custom Content Navbar -->
       <div class="rounded-xl overflow-hidden border border-slate-200">
         <JNavbar variant="default" :sticky="false">
           <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <span class="font-semibold text-slate-900">Default</span>
+            <span class="font-semibold text-slate-900">Custom Content</span>
             <nav class="flex items-center gap-4">
               <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Ana Sayfa</a>
               <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Hakkında</a>
             </nav>
             <JButton variant="solid" class="px-3 py-1.5 text-sm rounded-lg">Giriş</JButton>
-          </div>
-        </JNavbar>
-      </div>
-
-      <div class="rounded-xl overflow-hidden border border-slate-200 bg-gradient-to-r from-slate-100 to-slate-50">
-        <JNavbar variant="glass" :sticky="false">
-          <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <span class="font-semibold text-slate-900">Glass</span>
-            <a href="#" class="text-sm text-slate-500 hover:text-slate-900">Link</a>
-          </div>
-        </JNavbar>
-      </div>
-
-      <div class="rounded-xl overflow-hidden border border-slate-200">
-        <JNavbar variant="bordered" :sticky="false">
-          <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <span class="font-bold text-slate-900">Bordered</span>
-            <a href="#" class="text-sm text-slate-600 hover:text-slate-900">Link</a>
           </div>
         </JNavbar>
       </div>
