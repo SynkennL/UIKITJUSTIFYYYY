@@ -15,31 +15,31 @@ import IconShowcase from './components/IconShowcase.vue'
   <div class="space-y-0">
     <ButtonShowcase />
 
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-16" />
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <InputShowcase />
 
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-16" />
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <CardShowcase />
 
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-16" />
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <ExtrasShowcase />
 
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-16" />
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <ProgressShowcase />
 
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-16" />
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <MiscShowcase />
 
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-16" />
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <LayoutShowcase />
 
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-16" />
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <SubLayoutShowcase />
 
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-16" />
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <SidebarShowcase />
 
-    <div class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent my-16" />
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <IconShowcase />
   </div>
 </template>

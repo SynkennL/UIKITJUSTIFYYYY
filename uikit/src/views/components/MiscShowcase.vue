@@ -8,20 +8,20 @@ const textValue = ref('')
 <template>
   <section id="misc" class="space-y-6 scroll-mt-20">
     <div class="flex items-center gap-3">
-      <h2 class="text-xl font-semibold text-slate-900">Diğer</h2>
-      <span class="text-xs text-slate-400">Textarea, Skeleton, Divider, Tooltip</span>
+      <h2 class="text-xl font-semibold text-slate-100">Diğer</h2>
+      <span class="text-xs text-slate-500">Textarea, Skeleton, Divider, Tooltip</span>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Textarea -->
-      <div class="p-6 bg-slate-50 rounded-xl space-y-4">
-        <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Textarea</p>
+      <div class="p-6 bg-slate-800 rounded-xl space-y-4">
+        <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Textarea</p>
         <JTextarea v-model="textValue" placeholder="Mesajınızı yazın..." class="w-full px-3 py-2 rounded-md" />
       </div>
 
       <!-- Skeleton -->
-      <div class="p-6 bg-slate-50 rounded-xl space-y-4">
-        <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Skeleton</p>
+      <div class="p-6 bg-slate-800 rounded-xl space-y-4">
+        <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Skeleton</p>
         <div class="flex items-center gap-4">
           <JSkeleton class="w-12 h-12 rounded-full" />
           <div class="flex-1 space-y-2">
@@ -33,15 +33,15 @@ const textValue = ref('')
     </div>
 
     <!-- Divider -->
-    <div class="p-6 bg-slate-50 rounded-xl space-y-4">
-      <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Divider</p>
+    <div class="p-6 bg-slate-800 rounded-xl space-y-4">
+      <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Divider</p>
       <JDivider />
       <JDivider text="veya" />
     </div>
 
     <!-- Tooltip -->
-    <div class="p-6 bg-slate-50 rounded-xl space-y-4">
-      <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Tooltip</p>
+    <div class="p-6 bg-slate-800 rounded-xl space-y-4">
+      <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Tooltip</p>
       <div class="flex gap-4">
         <JTooltip position="top">
           <JButton variant="outline" class="px-3 py-1.5 text-sm rounded-lg">Üst</JButton>

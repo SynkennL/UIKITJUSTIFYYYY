@@ -97,40 +97,40 @@ const columnsFooterConfig = ref<FooterConfig>({
 <template>
     <section class="space-y-8">
         <div class="flex items-center gap-3">
-            <h2 class="text-xl font-semibold text-slate-900">Sub Layout</h2>
-            <span class="text-xs text-slate-400">SubNavbar & Footer</span>
+            <h2 class="text-xl font-semibold text-slate-100">Sub Layout</h2>
+            <span class="text-xs text-slate-500">SubNavbar & Footer</span>
         </div>
 
         <div class="space-y-6">
-            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">SubNavbar</p>
+            <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">SubNavbar</p>
 
             <!-- Simple Navbar -->
             <div class="space-y-2">
-                <span class="text-sm text-slate-600">Default</span>
-                <div class="rounded-xl border border-slate-200">
+                <span class="text-sm text-slate-300">Default</span>
+                <div class="rounded-xl border border-slate-700">
                     <JSubNavbar :config="simpleNavbarConfig" variant="default" :sticky="false" />
                 </div>
             </div>
 
             <!-- Dropdown Navbar -->
             <div class="space-y-2">
-                <span class="text-sm text-slate-600">Dropdown</span>
-                <div class="rounded-xl border border-slate-200 overflow-visible">
+                <span class="text-sm text-slate-300">Dropdown</span>
+                <div class="rounded-xl border border-slate-700 overflow-visible">
                     <JSubNavbar :config="dropdownNavbarConfig" variant="default" :sticky="false" />
                 </div>
             </div>
 
             <!-- Glass Variant -->
             <div class="space-y-2">
-                <span class="text-sm text-slate-600">Glass</span>
-                <div class="rounded-xl border border-slate-200 bg-slate-50">
+                <span class="text-sm text-slate-300">Glass</span>
+                <div class="rounded-xl border border-slate-700 bg-slate-800">
                     <JSubNavbar :config="simpleNavbarConfig" variant="glass" :sticky="false" />
                 </div>
             </div>
 
             <!-- Dark Variant -->
             <div class="space-y-2">
-                <span class="text-sm text-slate-600">Dark</span>
+                <span class="text-sm text-slate-300">Dark</span>
                 <div class="rounded-xl">
                     <JSubNavbar :config="simpleNavbarConfig" variant="dark" :sticky="false" />
                 </div>
@@ -138,35 +138,35 @@ const columnsFooterConfig = ref<FooterConfig>({
         </div>
 
         <div class="space-y-6">
-            <p class="text-xs font-medium text-slate-500 uppercase tracking-wider">Footer</p>
+            <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Footer</p>
 
             <!-- Simple Layout -->
             <div class="space-y-2">
-                <span class="text-sm text-slate-600">Simple</span>
-                <div class="rounded-xl border border-slate-200">
+                <span class="text-sm text-slate-300">Simple</span>
+                <div class="rounded-xl border border-slate-700">
                     <JFooter :config="simpleFooterConfig" layout="simple" variant="default" />
                 </div>
             </div>
 
             <!-- Columns Layout -->
             <div class="space-y-2">
-                <span class="text-sm text-slate-600">Columns</span>
-                <div class="rounded-xl border border-slate-200">
+                <span class="text-sm text-slate-300">Columns</span>
+                <div class="rounded-xl border border-slate-700">
                     <JFooter :config="columnsFooterConfig" layout="columns" variant="default" />
                 </div>
             </div>
 
             <!-- Centered Layout -->
             <div class="space-y-2">
-                <span class="text-sm text-slate-600">Centered</span>
-                <div class="rounded-xl border border-slate-200">
+                <span class="text-sm text-slate-300">Centered</span>
+                <div class="rounded-xl border border-slate-700">
                     <JFooter :config="simpleFooterConfig" layout="centered" variant="default" />
                 </div>
             </div>
 
             <!-- Dark Variant -->
             <div class="space-y-2">
-                <span class="text-sm text-slate-600">Dark</span>
+                <span class="text-sm text-slate-300">Dark</span>
                 <div class="rounded-xl">
                     <JFooter :config="simpleFooterConfig" layout="simple" variant="dark" />
                 </div>

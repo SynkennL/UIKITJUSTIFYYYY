@@ -8,10 +8,10 @@ const props = withDefaults(defineProps<{
 })
 
 const variants: Record<ButtonVariant, string> = {
-  solid: 'bg-slate-800 text-white hover:bg-slate-700',
-  outline: 'border border-slate-300 text-slate-700 hover:bg-slate-50',
-  ghost: 'text-slate-600 hover:bg-slate-100',
-  link: 'text-slate-600 hover:underline'
+  solid: 'bg-slate-600 text-white hover:bg-slate-500',
+  outline: 'border border-slate-500 text-slate-300 hover:bg-slate-700',
+  ghost: 'text-slate-300 hover:bg-slate-700',
+  link: 'text-slate-400 hover:text-slate-200 hover:underline'
 }
 </script>
 

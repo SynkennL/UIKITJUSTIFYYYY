@@ -8,12 +8,12 @@ const props = withDefaults(defineProps<{
 })
 
 const variants: Record<BadgeVariant, string> = {
-  solid: 'bg-slate-900 text-white',
-  outline: 'bg-transparent border border-slate-300 text-slate-600',
-  soft: 'bg-slate-100 text-slate-700',
-  dot: 'bg-transparent text-slate-600 before:content-[""] before:w-1.5 before:h-1.5 before:rounded-full before:bg-current before:mr-1.5',
-  gradient: 'bg-gradient-to-r from-slate-800 to-slate-600 text-white',
-  glass: 'bg-white/20 backdrop-blur-sm text-slate-800 border border-white/30'
+  solid: 'bg-slate-600 text-white',
+  outline: 'bg-transparent border border-slate-500 text-slate-300',
+  soft: 'bg-slate-700 text-slate-200',
+  dot: 'bg-transparent text-slate-300 before:content-[""] before:w-1.5 before:h-1.5 before:rounded-full before:bg-current before:mr-1.5',
+  gradient: 'bg-gradient-to-r from-slate-600 to-slate-500 text-white',
+  glass: 'bg-slate-700/40 backdrop-blur-sm text-slate-200 border border-slate-600/30'
 }
 </script>
 

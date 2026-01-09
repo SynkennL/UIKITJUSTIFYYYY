@@ -9,8 +9,8 @@
 
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: #ffffff;
-    color: #1e293b;
+    background-color: #0f172a;
+    color: #e2e8f0;
     line-height: 1.6;
     min-height: 100vh;
   }
@@ -61,29 +61,29 @@
 
 /* Glass Button */
 .btn-glass {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(30, 41, 59, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .btn-glass:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(30, 41, 59, 0.8);
 }
 
 /* Neumorphism Button */
 .btn-neu {
-  background: #e8eaee;
-  box-shadow: 6px 6px 12px #c5c7ca, -6px -6px 12px #ffffff;
+  background: #1e293b;
+  box-shadow: 6px 6px 12px #0f172a, -6px -6px 12px #334155;
   transition: all 0.2s ease;
 }
 
 .btn-neu:hover {
-  box-shadow: 4px 4px 8px #c5c7ca, -4px -4px 8px #ffffff;
+  box-shadow: 4px 4px 8px #0f172a, -4px -4px 8px #334155;
 }
 
 .btn-neu:active {
-  box-shadow: inset 4px 4px 8px #c5c7ca, inset -4px -4px 8px #ffffff;
+  box-shadow: inset 4px 4px 8px #0f172a, inset -4px -4px 8px #334155;
 }
 
 /* Pulse Animation */

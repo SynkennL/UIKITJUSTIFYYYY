@@ -10,12 +10,12 @@ const links = [
 </script>
 
 <template>
-  <footer class="mt-auto border-t border-slate-200 bg-white">
+  <footer class="mt-auto border-t border-slate-700 bg-slate-900">
     <div class="max-w-4xl mx-auto px-6 py-8">
       <!-- Top Row: Brand & Links -->
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-700">
         <div>
-          <h3 class="font-semibold text-slate-900">Justify UI</h3>
+          <h3 class="font-semibold text-slate-100">Justify UI</h3>
         </div>
         
         <nav class="flex flex-wrap gap-4">
@@ -23,7 +23,7 @@ const links = [
             v-for="link in links" 
             :key="link.name"
             :href="link.href"
-            class="text-sm text-slate-500 hover:text-slate-900 transition-colors"
+            class="text-sm text-slate-400 hover:text-slate-100 transition-colors"
           >
             {{ link.name }}
           </a>
@@ -32,14 +32,14 @@ const links = [
       
       <!-- Bottom Row: Copyright & Social -->
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6">
-        <span class="text-sm text-slate-500">&copy; {{ currentYear }} Justify UI. Tüm hakları saklıdır.</span>
+        <span class="text-sm text-slate-400">&copy; {{ currentYear }} Justify UI. Tüm hakları saklıdır.</span>
         
         <div class="flex items-center gap-3">
           <a 
             href="https://github.com/SynkennL/JustifyyUIKit" 
             target="_blank"
             rel="noopener noreferrer"
-            class="text-slate-400 hover:text-slate-600 transition-colors"
+            class="text-slate-500 hover:text-slate-300 transition-colors"
             title="GitHub"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

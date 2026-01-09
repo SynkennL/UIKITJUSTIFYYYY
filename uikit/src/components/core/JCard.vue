@@ -8,10 +8,10 @@ const props = withDefaults(defineProps<{
 })
 
 const variants: Record<CardVariant, string> = {
-  default: 'bg-white border border-slate-200',
-  bordered: 'bg-white border-2 border-slate-900',
-  elevated: 'bg-white shadow-xl shadow-slate-200/50',
-  glass: 'bg-white/60 backdrop-blur-xl border border-white/20 shadow-lg'
+  default: 'bg-slate-800 border border-slate-700',
+  bordered: 'bg-slate-800 border-2 border-slate-500',
+  elevated: 'bg-slate-800 shadow-xl shadow-slate-900/50',
+  glass: 'bg-slate-800/60 backdrop-blur-xl border border-slate-600/30 shadow-lg'
 }
 </script>
 

@@ -41,15 +41,15 @@ const containerClass = computed(() => {
                 <!-- Hero Section (Optional) -->
                 <section v-if="showHero" class="text-center py-8">
                     <slot name="hero">
-                        <h1 class="text-3xl font-bold text-slate-900 mb-2">{{ title }}</h1>
-                        <p class="text-slate-500 mb-4">{{ subtitle }}</p>
+                        <h1 class="text-3xl font-bold text-slate-100 mb-2">{{ title }}</h1>
+                        <p class="text-slate-400 mb-4">{{ subtitle }}</p>
                         <div class="flex justify-center gap-2 flex-wrap">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs rounded-full">UI Kit</span>
+                            <span class="px-3 py-1 bg-slate-700 text-slate-300 text-xs rounded-full">UI Kit</span>
                         </div>
                     </slot>
                 </section>
 
-                <div v-if="showHero" class="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+                <div v-if="showHero" class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
 
                 <!-- Content Slot -->
                 <slot />

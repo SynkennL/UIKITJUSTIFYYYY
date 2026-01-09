@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="animate-pulse bg-slate-200 rounded">
+  <div class="animate-pulse bg-slate-700 rounded">
     <slot />
   </div>
 </template>
