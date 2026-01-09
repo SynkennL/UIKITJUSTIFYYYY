@@ -88,5 +88,7 @@ const closeMobile = () => isMobileOpen.value = false
                 <slot />
             </main>
         </div>
+
+        <Footer v-if="showFooter" />
     </div>
 </template>
