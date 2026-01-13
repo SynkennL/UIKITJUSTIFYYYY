@@ -8,6 +8,7 @@ import MiscShowcase from './components/MiscShowcase.vue'
 import LayoutShowcase from './components/LayoutShowcase.vue'
 import SubLayoutShowcase from './components/SubLayoutShowcase.vue'
 import SidebarShowcase from './components/SidebarShowcase.vue'
+import DashboardShowcase from './components/DashboardShowcase.vue'
 import IconShowcase from './components/IconShowcase.vue'
 </script>
 
@@ -38,6 +39,9 @@ import IconShowcase from './components/IconShowcase.vue'
 
     <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <SidebarShowcase />
+
+    <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
+    <DashboardShowcase />
 
     <div class="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent my-16" />
     <IconShowcase />
