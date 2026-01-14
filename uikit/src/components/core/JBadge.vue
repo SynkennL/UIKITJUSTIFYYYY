@@ -18,7 +18,8 @@ const variants: Record<BadgeVariant, string> = {
 </script>
 
 <template>
-  <span :class="variants[variant]" class="inline-flex items-center transition-all">
+  <span :class="variants[variant]"
+    class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold transition-all">
     <slot />
   </span>
 </template>

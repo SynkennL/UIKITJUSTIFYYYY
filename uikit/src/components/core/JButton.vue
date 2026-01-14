@@ -16,7 +16,8 @@ const variants: Record<ButtonVariant, string> = {
 </script>
 
 <template>
-  <button :class="variants[props.variant]" class="transition-all cursor-pointer">
+  <button :class="variants[props.variant]"
+    class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-all cursor-pointer">
     <slot />
   </button>
 </template>
