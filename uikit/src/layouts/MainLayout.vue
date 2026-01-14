@@ -8,6 +8,7 @@ interface Props {
     showNavbar?: boolean
     showFooter?: boolean
     showHero?: boolean
+    navbarVariant?: 'default' | 'home'
     containerWidth?: 'sm' | 'md' | 'lg' | 'xl' | 'full'
 }
 
@@ -17,6 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
     showNavbar: true,
     showFooter: true,
     showHero: true,
+    navbarVariant: 'default',
     containerWidth: 'xl'
 })
 
@@ -34,7 +36,7 @@ const containerClass = computed(() => {
 
 <template>
     <div class="min-h-screen flex flex-col">
-        <Navbar v-if="showNavbar" :title="title" />
+        <Navbar v-if="showNavbar" :title="title" :variant="navbarVariant" />
 
         <main class="flex-1 py-10 px-6">
             <div :class="[containerClass, 'mx-auto space-y-16']">

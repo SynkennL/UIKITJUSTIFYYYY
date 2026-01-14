@@ -1,13 +1,24 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useRoute } from 'vue-router'
+
+interface NavLink {
+  name: string
+  to?: string
+  href?: string
+}
 
 interface Props {
   title?: string
+  variant?: 'default' | 'home'
 }
 
-withDefaults(defineProps<Props>(), {
-  title: 'UI Kit'
+const props = withDefaults(defineProps<Props>(), {
+  title: 'Justify UI',
+  variant: 'default'
 })
+
+const route = useRoute()
 
 // Mobil menü durumu
 const isMobileMenuOpen = ref(false)
@@ -20,30 +31,55 @@ const closeMobileMenu = () => {
   isMobileMenuOpen.value = false
 }
 
-// Navigasyon linkleri
-const navLinks = [
-  { name: 'Buttons', href: '#buttons' },
-  { name: 'Inputs', href: '#inputs' },
-  { name: 'Cards', href: '#cards' },
-  { name: 'Extras', href: '#extras' }
-]
+// Navigasyon linkleri - Home sayfası veya Components sayfasına göre değişir
+const navLinks = computed<NavLink[]>(() => {
+  if (props.variant === 'home') {
+    return [
+      { name: 'Home', to: '/' },
+      { name: 'Components', to: '/components' }
+    ]
+  }
+  return [
+    { name: 'Home', to: '/' },
+    { name: 'Components', to: '/components' },
+    { name: 'Buttons', href: '#buttons' },
+    { name: 'Inputs', href: '#inputs' },
+    { name: 'Cards', href: '#cards' }
+  ]
+})
+
+const isActiveLink = (link: NavLink) => {
+  if (link.to) {
+    return route.path === link.to
+  }
+  return false
+}
 </script>
 
 <template>
   <header
     class="sticky top-0 z-50 w-full border-b border-slate-700 bg-slate-900/95 backdrop-blur supports-[backdrop-filter]:bg-slate-900/80">
-    <div class="max-w-4xl mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-6">
       <div class="flex h-14 items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center gap-6">
-          <span class="font-bold text-slate-100">{{ title }}</span>
+          <router-link to="/" class="font-bold text-slate-100 hover:text-white transition-colors">
+            {{ title }}
+          </router-link>
 
           <!-- Desktop Navigation -->
           <nav class="hidden md:flex items-center gap-4 text-sm">
-            <a v-for="link in navLinks" :key="link.name" :href="link.href"
-              class="text-slate-400 hover:text-slate-100 transition-colors">
-              {{ link.name }}
-            </a>
+            <template v-for="link in navLinks" :key="link.name">
+              <router-link v-if="link.to" :to="link.to" :class="[
+                'transition-colors',
+                isActiveLink(link) ? 'text-slate-100' : 'text-slate-400 hover:text-slate-100'
+              ]">
+                {{ link.name }}
+              </router-link>
+              <a v-else :href="link.href" class="text-slate-400 hover:text-slate-100 transition-colors">
+                {{ link.name }}
+              </a>
+            </template>
           </nav>
         </div>
 
@@ -83,10 +119,18 @@ const navLinks = [
       leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-2">
       <div v-if="isMobileMenuOpen" class="md:hidden border-t border-slate-700 bg-slate-900">
         <nav class="flex flex-col px-6 py-4 space-y-1">
-          <a v-for="link in navLinks" :key="link.name" :href="link.href" @click="closeMobileMenu"
-            class="px-3 py-2 text-slate-300 hover:text-slate-100 hover:bg-slate-800 rounded-lg transition-colors">
-            {{ link.name }}
-          </a>
+          <template v-for="link in navLinks" :key="link.name">
+            <router-link v-if="link.to" :to="link.to" @click="closeMobileMenu" :class="[
+              'px-3 py-2 rounded-lg transition-colors',
+              isActiveLink(link) ? 'text-slate-100 bg-slate-800' : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800'
+            ]">
+              {{ link.name }}
+            </router-link>
+            <a v-else :href="link.href" @click="closeMobileMenu"
+              class="px-3 py-2 text-slate-300 hover:text-slate-100 hover:bg-slate-800 rounded-lg transition-colors">
+              {{ link.name }}
+            </a>
+          </template>
 
           <!-- Mobile GitHub Link -->
           <a href="https://github.com/SynkennL/JustifyyUIKit" target="_blank" rel="noopener noreferrer"
