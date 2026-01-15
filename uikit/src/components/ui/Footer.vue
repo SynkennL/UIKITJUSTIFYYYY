@@ -1,12 +1,7 @@
 <script setup lang="ts">
 const currentYear = new Date().getFullYear()
 
-const links = [
-  { name: 'Buttons', href: '#buttons' },
-  { name: 'Inputs', href: '#inputs' },
-  { name: 'Cards', href: '#cards' },
-  { name: 'Extras', href: '#extras' }
-]
+
 </script>
 
 <template>
@@ -17,17 +12,6 @@ const links = [
         <div>
           <h3 class="font-semibold text-slate-100">Justify UI</h3>
         </div>
-        
-        <nav class="flex flex-wrap gap-4">
-          <a 
-            v-for="link in links" 
-            :key="link.name"
-            :href="link.href"
-            class="text-sm text-slate-400 hover:text-slate-100 transition-colors"
-          >
-            {{ link.name }}
-          </a>
-        </nav>
       </div>
       
       <!-- Bottom Row: Copyright & Social -->
