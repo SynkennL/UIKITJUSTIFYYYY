@@ -102,7 +102,7 @@ const handleMouseLeave = () => {
                     </h1>
 
                     <p class="text-lg text-slate-400 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                        Modern ve özelleştirilebilir Vue.js bileşenleri ile projelerinizi hızla hayata geçirin.
+                        Modern ve özelleştirilebilir UI Kit bileşenleri ile projelerinizi hızla hayata geçirin.
                     </p>
 
                     <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -166,7 +166,7 @@ const handleMouseLeave = () => {
                             style="transform-style: preserve-3d;">
                             <div class="flex flex-col gap-3">
                                 <h2 class="text-2xl font-bold text-white">Justify UI Kit</h2>
-                                <p class="text-white/80 text-sm leading-relaxed">Modern, şık ve güçlü Vue.js
+                                <p class="text-white/80 text-sm leading-relaxed">Modern, şık ve güçlü UI Kit
                                     bileşenleriyle projelerinizi bir üst seviyeye taşıyın.</p>
                             </div>
                             <div class="flex gap-3">
